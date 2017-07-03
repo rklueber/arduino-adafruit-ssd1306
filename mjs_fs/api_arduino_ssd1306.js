@@ -19,7 +19,7 @@ let Adafruit_SSD1306 = {
   _dp: ffi('void mgos_ssd1306_draw_pixel(void *, int, int, int)'),
   _dfvl: ffi('void mgos_ssd1306_draw_fast_vline(void *, int, int, int, int)'),
   _dfhl: ffi('void mgos_ssd1306_draw_fast_hline(void *, int, int, int, int)'),
-  _pair: ffi('int mgos_ssd1306_make_xy_pair(int, int)'),
+  Adafruit_SSD1306._pair: ffi('int mgos_ssd1306_make_xyAdafruit_SSD1306._pair(int, int)'),
   _dc: ffi('void mgos_ssd1306_draw_circle(void *, int, int, int)'),
   _dch: ffi('void mgos_ssd1306_draw_circle_helper(void *, int, int, int, int)'),
   _fc: ffi('void mgos_ssd1306_fill_circle(void *, int, int, int)'),
@@ -125,39 +125,39 @@ let Adafruit_SSD1306 = {
     },
 
     drawCircle: function(x0, y0, r, color) {
-      return Adafruit_SSD1306._dc(this.ssd, _pair(x0, y0), r, color);
+      return Adafruit_SSD1306._dc(this.ssd, Adafruit_SSD1306._pair(x0, y0), r, color);
     },
 
     drawCircleHelper: function(x0, y0, r, cornername, color) {
-      return Adafruit_SSD1306._dch(this.ssd, _pair(x0, y0), r, cornername, color);
+      return Adafruit_SSD1306._dch(this.ssd, Adafruit_SSD1306._pair(x0, y0), r, cornername, color);
     },
 
     fillCircle: function(x0, y0, r, color) {
-      return Adafruit_SSD1306._fc(this.ssd, _pair(x0, y0), r, color);
+      return Adafruit_SSD1306._fc(this.ssd, Adafruit_SSD1306._pair(x0, y0), r, color);
     },
 
     fillCircleHelper: function(x0, y0, r, cornername, delta, color) {
-      return Adafruit_SSD1306._fch(this.ssd, _pair(x0, y0), r, cornername, delta, color);
+      return Adafruit_SSD1306._fch(this.ssd, Adafruit_SSD1306._pair(x0, y0), r, cornername, delta, color);
     },
 
     drawTriangle: function(x0, y0, x1, y1, x2, y2, color) {
-      return Adafruit_SSD1306._dt(this.ssd, _pair(x0, y0), _pair(x1, y1), _pair(x2, y2), color);
+      return Adafruit_SSD1306._dt(this.ssd, Adafruit_SSD1306._pair(x0, y0), Adafruit_SSD1306._pair(x1, y1), Adafruit_SSD1306._pair(x2, y2), color);
     },
 
     fillTriangle: function(x0, y0, x1, y1, x2, y2, color) {
-      return Adafruit_SSD1306._ft(this.ssd, _pair(x0, y0), _pair(x1, y1), _pair(x2, y2), color);
+      return Adafruit_SSD1306._ft(this.ssd, Adafruit_SSD1306._pair(x0, y0), Adafruit_SSD1306._pair(x1, y1), Adafruit_SSD1306._pair(x2, y2), color);
     },
 
     drawRoundRect: function(x0, y0, w, h, radius, color) {
-      return Adafruit_SSD1306._drr(this.ssd, _pair(x0, y0), w, h, radius, color);
+      return Adafruit_SSD1306._drr(this.ssd, Adafruit_SSD1306._pair(x0, y0), w, h, radius, color);
     },
 
     fillRoundRect: function(x0, y0, w, h, radius, color) {
-      return Adafruit_SSD1306._frr(this.ssd, _pair(x0, y0), w, h, radius, color);
+      return Adafruit_SSD1306._frr(this.ssd, Adafruit_SSD1306._pair(x0, y0), w, h, radius, color);
     },
 
     drawChar: function(x, y, c, color, bg, size) {
-      return Adafruit_SSD1306._dch(this.ssd, _pair(x, y), c, color, bg, size);
+      return Adafruit_SSD1306._dch(this.ssd, Adafruit_SSD1306._pair(x, y), c, color, bg, size);
     },
 
     setCursor: function(x, y) {
